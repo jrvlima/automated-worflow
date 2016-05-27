@@ -1,0 +1,489 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Overview of Software Automated Workflows</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<!--<script src="../../js/jquery.min.js"></script>-->
+		<script src="../../js/jquery.scrollzer.min.js"></script>
+		<script src="../../js/jquery.scrolly.min.js"></script>
+		<script src="../../js/skel.min.js"></script>
+		<script src="../../js/skel-layers.min.js"></script>
+		<script src="../../js/init.js"></script>
+		<!--<script src="vendors/jquery-ui/jquery-ui.min.js"></script>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+		
+		
+		<script type="text/javascript">
+			
+		</script>
+		<noscript>
+		<link rel="stylesheet" href="/css/skel.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/style-xlarge.css" />
+		</noscript>
+		<style>
+			.help-tip .ui-dialog-titlebar {
+				background: #4acaa8;
+			color: #d1f1e9;
+			height: 100%;
+			/* position: fixed; */
+			text-align: center;
+			top: 0;
+			/* width: 23em; */
+			right: 0;
+			border-radius: 0px;
+			border: none;
+			}
+			.ac-caption {
+				margin: 5px 0px 10px 0px;
+				font-size: 13px;
+				text-align: center;
+			}
+			#header > nav ul li a {
+				padding: 0px;
+				font-size: 0.8em;
+			}
+			#one:before {
+				background-image: none;
+				height: 0em;
+			}
+			.tip:hover {
+				font-weight: bold;
+			}
+			header.major h2 {
+				line-height: 1em;
+			}
+			.content-dg .list {
+				margin-top: 20px;
+			}
+		</style>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="dialog" title="Help Tip"></div>
+		<script id="dialog-content" type="text/x-handlebars-template">
+			<div class="content-dg">
+						<h1>{{title}}</h1>
+						<div class="body">
+									<p align="justify">{{{body}}}</p>
+						</div>
+						{{#if list}}
+							<div class="list">
+										{{#each list}}
+											<li>{{item}}</li>
+										{{/each}}
+							</div>
+						{{/if}}
+			</div>
+		</script>
+		<div id="wrapper">
+			<!-- Header -->
+			<section id="header" class="skel-layers-fixed">
+				<header>
+					
+					<h1 id="logo"><a href="../../automated-workflows.html">Overview of Software Automated Workflow</a></h1>
+					
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one">Continuous Integration</a></li>
+						<li><a href="#two">Continuos Delivery</a></li>
+						<li><a href="#three">Deployment Pipelines</a></li>
+					</ul>
+					<!-- <img src="http://www.avenuecode.com/wp-content/themes/ac-site/images/white-logo.png" alt=""> -->
+				</nav>
+				<footer>
+				</footer>
+			</section>
+			<!-- Main -->
+			<div id="main">
+				<section id="one">
+					<div class="container">
+						<header class="major">
+							<h2>Continuos Integration</h2>
+						</header>
+						<p align="justify">
+						Fasted automated feedback on the <b>correctness</b> of your application every time there's a change to code</p>
+						<p align="justify"><b>integrate early and often</b></p>
+						<p align="justify"><h4>Everyone Commits to the Mainline Every Day</h4></p>
+						
+						<h3>What you Need</h3>
+						<ul>
+							<li>
+								<h4>Version Control</h4>
+								<p align="justify">
+									code, tests, database scripts, build and deployment scripts, anything you need to create, install, run and test your application, no matter the size of your project
+								</p>
+							</li>
+							<li>
+								<h4>An Automated Build</h4>
+								<p align="justify">
+									The automated build must be able to be started from the command line, or a person or a computer must be able to run the build, test, and deployment process from the command line. The idea of be able to run through command line is a best practice no matter if you use IDE or continiuos integrations tools, the idea is that these tools would be using the same script you can run through your command line.
+									<h5>Justifications</h5>
+									<ul>
+										<li>you must able to run in an automated way so the build can be audit when things go wrong</li>
+										<li>build scrips shoudl be treated like your codebase, tested and refactored constantly</li>
+										<li>makes understanding, maintaining, and debugging the build easier, and allow better collaboration with ops team</li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<h4>Agreement of the Team</h4>
+								<p align="justify">
+									CI is a practice that requires commitment and discipline from you dev team.
+								</p>
+								<ul>
+									<li>Developers merge their code into trunk daily</li>
+									<li>Developers break up large features into small, incremental changes</li>
+									<li>Fix any change that breaks the build</li>
+								</ul>
+							</li>
+						</ul>
+						<p align="justify">
+							<h4>Ilustrating CI as a Practice</h4>
+							<figure>
+								<img src="images/ci_chicken.jpg" alt="" width="100%">
+								<figcaption><a href="http://www.jamesshore.com/Blog/Continuous-Integration-on-a-Dollar-a-Day.html">Continuous Integration on a Dollar a Day</a></figcaption>
+							</figure>
+						</p>
+						<hr />
+						<p align="justify">
+							<h3>Some CI Server Tools</h3>
+							<ul>
+								<li>Open Source
+									<ul>
+										<li><a href="http://hudson-ci.org">Hudson</a></li>
+										<li><a href="http://cruisecontrol.sourceforge.net">CruiseControl</a></li>
+										<li><a href="https://jenkins-ci.org">Jenkins</a></li>
+										<li><a href="http://buildbot.net">Buildbot</a></li>
+										<li><a href="https://travis-ci.org">Travis CI</a></li>
+										<li><a href="https://github.com/Strider-CD/strider">Strider</a></li>
+										<li><a href="http://integrity.github.io">Integrity</a></li>
+										<li><a href="https://continuum.apache.org">Continuum</a></li>
+										<li><a href="http://luntbuild.javaforge.com">Luntbuild</a></li>
+									</ul>
+								</li>
+								<li>As a Service
+									<ul>
+										<li><a href="https://circleci.com/features/">Circle CI</a></li>
+										<li><a href="https://codeship.com">Codeship</a></li>
+										<li><a href="https://www.cloudbees.com">Cloudbees</a></li>
+										<li><a href="https://semaphoreci.com">Semaphoreci</a></li>
+										<li><a href="https://drone.io">drone.io</a></li>
+									</ul>
+								</li>
+								<li>Commercial Tools
+									<ul>
+										<li>With Free Options for Small Teams
+											<ul>
+												<li><a href="https://www.go.cd">Go - ThoughtWorks</a></li>
+												<li><a href="https://www.jetbrains.com/teamcity/">TeamCity - JetBrains</a></li>
+											</ul>
+										</li>
+										<li>Others
+											<ul>
+												<li><a href="https://www.atlassian.com/software/bamboo/">Atlassian's Bamboo</a></li>
+												<li><a href="http://zutubi.com/products/pulse/">Zutubi's Pulse</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>Release Management and Build Acceleration Systems
+									<ul>
+										<li>UrbanCode's AntHillPro</li>
+										<li>EletricCloud's Eletric Commander</li>
+										<li>IBM BuildForge</li>
+									</ul>
+								</li>
+							</ul>
+						</p>
+						<p align="justify">
+							<h3>Simple Process to Follow</h3><h4>...when starting to use CI Servers according to Jez Humble</h4>
+							<blockquote>
+								<ol>
+									<li>Check to see if the build is already running. If so, wait for it to finish. If it fails, you'll need to work with the rest of the team to make it green before you check in</li>
+									<li>Once it has finished and the tests have passed, update the code in your development environment from this version in the version control repository to get any updates</li>
+									<li>Run the build script and tests on your development machine to make sure that everything still works correctly on your computer, or alternatively use your CI tool's personal build feature</li>
+									<li>If your local build passes, check your code into version control</li>
+									<li>Wait for your CI tool to run the build with your changes</li>
+									<li>If it fails, stop what you're doing and fix the problem immediately on your development machine - to to step 3</li>
+									<li>If your build passes, rejoice and move on to your next task</li>
+								</ol>
+							</blockquote>
+							<figure>
+								<img src="images/simple-process-to-follow.png" width="100%" alt="">
+							</figure>
+							
+						</p>
+						<div>
+							<h3>Prerequisites to CI</h3><h4>according to Jez Humble</h4>
+							
+							<ol>
+								<li>Check in Regurlaly to Trunk or Mainline, at least a couple of times a day
+									<ul>
+										<li>makes your changes smaller and thus less likely to break the build</li>
+										<li>you have a recent knowngood version of the software to revert in case of mistake or wrong path</li>
+										<li>helps to be more discipline about refactoring and stick to small changes that preserve behavior</li>
+										<li>ensure that changes altering a lot of files are less likely to conflict with other people's work</li>
+										<li>allows developers to be more explorative</li>
+										<li>force you to take regular breaks</li>
+										<li>...</li>
+									</ul>
+								</li>
+								<li>Comprehensive Automated Test Suite
+									<ul>
+										<li>without automated tests, passing a build is only compile and assemble</li>
+										<li>it's essencial to have some level of test to provide confidence that your application is working</li>
+										<li>unit tests, component tests, and acceptance tests are kind of tests we are interested in running from our CI</li>
+									</ul>
+								</li>
+								<li>Keep the Build and Test Process Short
+									<ul>
+										<li>If It taks to long
+											<ul>
+												<li>People will stop doing a full build and running test before check in the code</li>
+												<li>The CI process will take so long  that multiple commits will have taken place by the time you can run the build again, so you won't know which check in broke the build</li>
+												<li>People will check in less often</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ol>
+							<p align="justify">
+								<h5>Checking Into to Trunk ... </h5>
+								<ul>
+									<li>Use Trunk based despite we have many projects using branchs to manage large teams </li>
+									<li>It's impossible to truly do continuous integration while using branches, your code is not been integrated with that other developers</li>
+								</ul>
+							</p>
+							<p align="justify">
+								<h5>Managing your development workspace</h5>
+								<ul>
+									<li>Developers should be able to run the build, execute the automated tests, and deploy the application in and env under their control</li>
+									<li>Running the application locally should use the same automated process used in CI and testing envs and ultimately in production</li>
+									<li>For this is needed the use of configuration management for source code, test data, DB scripts, build scripts and deployment scripts, all of this in VCS and should be the most recent version that passed all automated tests in your CI server</li>
+									<li>configuration management of third-party dependencies, libraries and components</li>
+									<li>make sure that automated tests including smoke tests, can be run on developer machines</li>
+								</ul>
+							</p>
+							
+						</div>
+						<p>
+							<h3>Git Blame</h3>
+							<figure>
+								<img src="images/tumblr_inline_git-blamegif.gif" width="100%" alt="">
+								<figcaption>Git Blame</figcaption>
+							</figure>
+						</p>
+						<div>
+							<h3>Essential Practices</h3><h4>according to Jez Humble</h4>
+							<p align="justify">
+								<h5></h5>
+								<ul>
+									<li>Don't check in on a broken build</li>
+									<li>Always Run All Commit Tests Locally before Commiting, or Get Your CI Server 	to Do It for You</li>
+									<li>Wait for Commit Tests to Pass before Moving On</li>
+									<li>Neven go home on a broken build</li>
+									<li>Always Be Prepared to Revert to the Previous Revision</li>
+									<li>Time-box Fixing before Reverting</li>
+									<li>Don't Comment Out Failing Tests</li>
+									<li>Take Responsability for All Breakages That Result from Your Changes</li>
+									<li>TDD</li>
+								</ul>
+							</p>
+						</div>
+						<img src="images/trunk-daily-google-jez-humble.png" alt="" width="100%">
+						<p align="justify">
+							<blockquote>
+								<ul>
+									<li>Yes, 10000 developers all working from HEAD actually works.  People often say that this can't possibly scale, and yet here is an example of it working.  There's a big difference between "it can't work", "I haven't gotten it to work", and "I'm conjecturing that it couldn't work".</li>
+									<li>Even though Google has one big monolithic code tree, each project can be checked out individually.  That said, if your project is a library that other people use, compiling at timestamp T means getting the library as it is at timestamp T also.</li>
+									<li>Do some projects use a branch-and-merge methodology?  When I started at Google some did use "branch and merge".  However those numbers were shrinking.  I'm sure there were still some that did this, for special edge cases.  Not that I had visibility to every project at Google, but it was generally accepted as true that nearly everyone worked from HEAD.</li>
+									<li>"50% of code changes every month":  A big part of why that is possible is that Google is very aggressive about deleting inactive code.  It's still in the VCS's history if you need it, so why not delete it if it isn't being used?  By being aggressive about deleting inactive code it greatly reduces the maintenance tax.  Making a global change (like.... changing a library interface) is much easier when you only have to do it for active projects.</li>
+								</ul>
+							</blockquote><cite>Tom Limoncelli - ACM Queue - http://bit.ly/1RD1ZW0</cite>
+						</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/W71BTkUbdqE" frameborder="0" allowfullscreen></iframe>
+						<hr>
+						<div>
+							<h3>Facebook Release Process</h3>
+						
+						<div>
+							<audio controls>
+							<source src="sounds/infoq-12-nov-releaseengineering.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>	
+						</div>
+						
+						<div>
+							<cite><a href="http://www.infoq.com/presentations/Facebook-Release-Process">InfoQ - The Facebook Release Process</a></cite>		
+						</div>
+						
+						</div>
+						
+					</div>
+				</section>
+				<section id="two">
+					<div class="container">
+						<header class="major">
+							<h2>Continuos Delivery</h2>
+						</header>
+						<p align="justify">Fasted automated feedback on the <b>production readiness</b> of your application every time there's a change - <u>to code</u>, <u>infrastructure</u>, or <u>configuration</u></p>
+						<p align="justify"><b>software is always deployable</b></p>
+						<p align="justify">
+							Continiuos Delivery make cheap and low-risk to release new version of your software.
+						</p>
+						
+						<h4>continuous delivery ideal</h4>
+						<ul>
+							<li>software is always production ready</li>
+							<li>deployments are reliable and commonplace</li>
+							<li>everyone can self-service deployments</li>
+							<li>releases occur according to business needs, not operational constraints</li>
+						</ul>
+						
+						<h4>keys</h4>
+						<ul>
+							<li>Architecture
+								<ul>
+									<li>Design to Testability</li>
+									<li>Design to Deployability</li>
+								</ul>
+							</li>
+							<li>Patterns and Practices</li>
+							<li>Collaboration</li>
+						</ul>
+						<h4>prerequisites</h4>
+						<ul>
+							<li>configuration management</li>
+							<li>automated tests</li>
+							<li>continuos integration</li>
+						</ul>
+						<p align="justify">
+							<blockquote>
+								<h4>Correlation with IT Performance</h4>
+								<ul>
+									<li>Our code, app configuration and system configurations are in a version control system</li>
+									<li>We get failure alerts from logging and monitoring systems</li>
+									<li>VERY HARD TO ACHIEVE
+										<ul>
+											<li>Developers merge their code into trunk daily</li>
+											<li>Developers break up large features into small, incremental changes</li>
+										</ul>
+									</li>
+									<li>When development and operational teams interact, the outcome is generally win/win</li>
+								</ul>
+							</blockquote><cite>Puppet Labs - DevOps Report 2014</cite>
+						</p>
+						
+						
+						<p align="justify">Continuous Delivery requires, as a pre reqs an intensive collaboration between different roles, minimizing the idea of silos. The team should have the mind set that delivery the software is a responsability of everyone. Developers, testers, UX, operations, business people should work together and collaborativily through delivery process. One practice is have fisically developers, testers, business and operation people working together.</p>
+						<blockquote>
+							<figure align="justify">
+								<img src="images/devops-report-2015-contdelivery-relations.png" width="100%">
+								<figcaption>Path diagram showing relationships between continuous delivery practices, IT performance, deployment pain, change failure rate, and organization performance</figcaption>
+							</figure>
+						</blockquote><cite>Puppet Labs - DevOps Report 2015</cite>
+						
+						<hr />
+					</div>
+				</section>
+				<section id="three">
+					<div class="container">
+						<header class="major">
+							<h2>Deployment Pipelines</h2>
+						</header>
+						<p align="justify">
+							
+						</p>
+						<p align="justify">
+							<blockquote>
+								<figure>
+									<img src="images/fig5_1.jpg" alt="" width="100%">
+									<figcaption>A simple value stream map for a product</figcaption>
+								</figure>
+							</blockquote><cite>Jez Humble; David Farley - Continuos Delivery</cite>
+						</p>
+						<p align="justify">
+							<blockquote>
+								<figure>
+									<img src="images/fig5_2.jpg" alt="" width="100%">
+									<figcaption>Deployment Pipeline</figcaption>
+								</figure>
+							</blockquote><cite>Jez Humble; David Farley - Continuos Delivery</cite>
+						</p>
+						<p align="justify">
+							<blockquote>
+								<figure>
+									<img src="images/fig5_3.jpg" alt="" width="100%">
+									<figcaption></figcaption>
+								</figure>
+							</blockquote><cite>Jez Humble; David Farley - Continuos Delivery</cite>
+						</p>
+						<p align="justify">
+							<blockquote>
+								<figure>
+									<img src="images/fig5_4.jpg" alt="" width="100%">
+									<figcaption>Deployment Pipeline</figcaption>
+								</figure>
+							</blockquote><cite>Jez Humble; David Farley - Continuos Delivery</cite>
+						</p>
+						<p align="justify">
+							<blockquote>
+								<figure>
+									<img src="images/fig5_5.jpg" alt="" width="100%">
+									<figcaption>Pipeline Activity</figcaption>
+								</figure>
+							</blockquote><cite>Jez Humble; David Farley - Continuos Delivery</cite>
+						</p>
+						<p align="justify">
+							<blockquote>
+								<figure>
+									<img src="images/acpt-stage.jpg" alt="" width="100%">
+									<figcaption>Acceptance Stage</figcaption>
+								</figure>
+								<ul>
+									<li>End-to-end tests in production-like environment</li>
+									<li>Trigged when upstream stage passes</li>
+									<li>First DevOps-centric build</li>
+								</ul>
+							</blockquote><cite>Neal Ford - Continuos Delivery</cite>
+						</p>
+						<p align="justify">
+							<blockquote>
+								<figure>
+									<img src="images/later-stages.jpg" alt="" width="100%">
+									<figcaption>Later Stages</figcaption>
+								</figure>
+								<ul>
+									<li>UAT, staging, integration, production, ...</li>
+									<li>Push versus Pull model</li>
+									<li>Deployments sef-serviced through push-button process</li>
+								</ul>
+							</blockquote><cite>Neal Ford - Continuos Delivery</cite>
+						</p>
+					</section>
+					<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Avenue Code. All rights reserved.</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</body>
+		</html>

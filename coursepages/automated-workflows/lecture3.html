@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Overview of Software Automated Workflows</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<!--<script src="../../js/jquery.min.js"></script>-->
+		<script src="../../js/jquery.scrollzer.min.js"></script>
+		<script src="../../js/jquery.scrolly.min.js"></script>
+		<script src="../../js/skel.min.js"></script>
+		<script src="../../js/skel-layers.min.js"></script>
+		<script src="../../js/init.js"></script>
+		<!--<script src="vendors/jquery-ui/jquery-ui.min.js"></script>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+		
+		
+		<script type="text/javascript">
+			
+		</script>
+		<noscript>
+		<link rel="stylesheet" href="/css/skel.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/style-xlarge.css" />
+		</noscript>
+		<style>
+			.help-tip .ui-dialog-titlebar {
+				background: #4acaa8;
+			color: #d1f1e9;
+			height: 100%;
+			/* position: fixed; */
+			text-align: center;
+			top: 0;
+			/* width: 23em; */
+			right: 0;
+			border-radius: 0px;
+			border: none;
+			}
+			.ac-caption {
+				margin: 5px 0px 10px 0px;
+				font-size: 13px;
+				text-align: center;
+			}
+			#header > nav ul li a {
+				padding: 0px;
+				font-size: 0.8em;
+			}
+			#one:before {
+				background-image: none;
+				height: 0em;
+			}
+			.tip:hover {
+				font-weight: bold;
+			}
+			header.major h2 {
+				line-height: 1em;
+			}
+			.content-dg .list {
+				margin-top: 20px;
+			}
+		</style>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="dialog" title="Help Tip"></div>
+		<script id="dialog-content" type="text/x-handlebars-template">
+			<div class="content-dg">
+									<h1>{{title}}</h1>
+									<div class="body">
+															<p align="justify">{{{body}}}</p>
+									</div>
+									{{#if list}}
+										<div class="list">
+																{{#each list}}
+																		<li>{{item}}</li>
+																{{/each}}
+										</div>
+									{{/if}}
+			</div>
+		</script>
+		<div id="wrapper">
+			<!-- Header -->
+			<section id="header" class="skel-layers-fixed">
+				<header>
+					
+					<h1 id="logo"><a href="../../automated-workflows.html">Overview of Software Automated Workflow</a></h1>
+					
+				</header>
+				<nav id="nav">
+					<ul>
+						
+						<li><a href="#sixth">Git Workflows</a></li>
+						<li><a href="#seventh">Centralized Workflow</a></li>
+						<li><a href="#eighth">Feature Branch Workflow</a></li>
+						<li><a href="#nineth">Gitflow Workflow</a></li>
+						<li><a href="#tenth">Forking Workflow</a></li>
+					</ul>
+					<!-- <img src="http://www.avenuecode.com/wp-content/themes/ac-site/images/white-logo.png" alt=""> -->
+				</nav>
+				<footer>
+				</footer>
+			</section>
+			<!-- Main -->
+			<div id="main">
+				<!-- One -->
+				
+				<section id="sixth">
+					<div class="container">
+						<header class="major">
+							<h2>Git Workflows</h2>
+						</header>
+						<blockquote>
+							The array of possible workflows can make it hard to know where to begin when implementing Git in the workplace.
+							<hr />
+							Often in a company we'll hear some of the following statements:
+							<ul>
+								<li>The best option is Gitflow Workflow because it's referred by git book.</li>
+								<li>The best option is Feature Branch workflow because a Big Company uses it and it works.</li>
+								<li>The best option is to commit on a single mainline.</li>
+							</ul>
+						</blockquote>
+						<p align="justify">
+							Which one is the best workflow model? Depends!
+							<br> Remember? There's no silver bullet on Continuous Integration.
+						</p>
+						<p align="justify">
+							Instead of telling you the best option.
+							<br> We will walk you throught the standard and known git workflows and analyse pros and cons of each one of them.
+						</p>
+					</div>
+				</section>
+				<section id="seventh">
+					<div class="container">
+						<header class="major">
+							<h2>Centralized Workflow</h2>
+						</header>
+						<blockquote>
+							<p>Very known on Subversion, the centralized workflow preaches a central repository to serve as the single point-of-entry for all changes to the project.</p>
+							<p>Instead of trunk, the default development branch is called master and all changes are committed into this branch. This workflow doesn’t require any other branches besides master.</p>
+							<p>However, using Git to power your development workflow presents a few advantages over SVN.
+							<br>First, it gives every developer their own local copy of the entire project. This isolated environment lets each developer work independently of all other changes to a project</p>
+						</blockquote>
+						<header>
+							<h3>How it works</h3>
+						</header>
+						<p>Developers start by cloning the central repository. In their own local copies of the project, they edit files and commit changes as they would with SVN; however, these new commits are stored locally—they’re completely isolated from the central repository. This lets developers defer synchronizing upstream until they’re at a convenient break point.</p>
+						<p>To publish changes to the official project, developers “push” their local master branch to the central repository. This is the equivalent of svn commit, except that it adds all of the local commits that aren’t already in the central master branch.</p>
+						<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/centralized-workflow/02.svg"></img>
+						<header>
+							<h4>Managing Conflicts</h4>
+						</header>
+						<p>
+							The central repository represents the official project, so its commit history should be treated as sacred and immutable. If a developer’s local commits diverge from the central repository, Git will refuse to push their changes because this would overwrite official commits
+						</p>
+						<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/centralized-workflow/03.svg"></img>
+						<p>Before the developer can publish their feature, they need to fetch the updated central commits and rebase their changes on top of them.</p>
+						<p>If local changes directly conflict with upstream commits, Git will pause the rebasing process and give you a chance to manually resolve the conflicts.</p>
+					</div>
+				</section>
+				<section id="eighth">
+					<div class="container">
+						<header class="major">
+							<h2>Feature Branch Workflow</h2>
+						</header>
+						<blockquote>
+							<p>The Gitflow Workflow defines a strict branching model designed around the project release. While somewhat more complicated than the Feature Branch Workflow, this provides a robust framework for managing larger projects.</p>
+							<p>This workflow doesn’t add any new concepts or commands beyond what’s required for the Feature Branch Workflow. Instead, it assigns very specific roles to different branches and defines how and when they should interact.</p>
+						</blockquote>
+						<header>
+							<h3>How It works</h3>
+						</header>
+						<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/feature-branch-workflow/01.svg"></img>
+						<p>The Feature Branch Workflow still uses a central repository, and master still represents the official project history. But, instead of committing directly on their local master branch, developers create a new branch every time they start work on a new feature. Feature branches should have descriptive names, like animated-menu-items or issue-#1061. The idea is to give a clear, highly-focused purpose to each branch.</p>
+						<p>In addition, feature branches can (and should) be pushed to the central repository. This makes it possible to share a feature with other developers without touching any official code. Since master is the only “special” branch, storing several feature branches on the central repository doesn’t pose any problems. Of course, this is also a convenient way to back up everybody’s local commits.</p>
+					</p>
+				</div>
+			</section>
+			<section id="nineth">
+				<div class="container">
+					<header class="major">
+						<h2>Gitflow Workflow</h2>
+					</header>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/01.svg"></img>
+					<blockquote>
+						<p>The Gitflow Workflow defines a strict branching model designed around the project release. While somewhat more complicated than the Feature Branch Workflow, this provides a robust framework for managing larger projects.</p>
+						<p>This workflow doesn’t add any new concepts or commands beyond what’s required for the Feature Branch Workflow. Instead, it assigns very specific roles to different branches and defines how and when they should interact. In addition to feature branches, it uses individual branches for preparing, maintaining, and recording releases. Of course, you also get to leverage all the benefits of the Feature Branch Workflow: pull requests, isolated experiments, and more efficient collaboration.</p>
+					</blockquote>
+					<header>
+						<h3>How It works</h3>
+					</header>
+					<img src="https://lesfurets.github.io/lesfurets-conferences/img/book-git.png"></img>
+					<p>
+						The Gitflow Workflow still uses a central repository as the communication hub for all developers. And, as in the other workflows, developers work locally and push branches to the central repo. The only difference is the branch structure of the project.
+					</p>
+					<p>
+						Instead of a single master branch, this workflow uses two branches to record the history of the project. The master branch stores the official release history, and the develop branch serves as an integration branch for features. It's also convenient to tag all commits in the master branch with a version number.
+					</p>
+					<p>
+						Each new feature should reside in its own branch, which can be pushed to the central repository for backup/collaboration. But, instead of branching off of master, feature branches use develop as their parent branch. When a feature is complete, it gets merged back into develop. Features should never interact directly with master.
+					</p>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/03.svg"></img>
+				</div>
+			</section>
+			<section id="tenth">
+				<div class="container">
+					<header class="major">
+						<h2>Forking Workflow</h2>
+					</header>
+					<blockquote>
+						<p>The Forking Workflow is fundamentally different than the other workflows discussed before.<br></p> Instead of using a single server-side repository to act as the “central” codebase, it gives every developer a server-side repository. This means that each contributor has not one, but two Git repositories: a private local one and a public server-side one.</p>
+						<p>This means that each contributor has not one, but two Git repositories</p>
+						<p>The main advantage of the Forking Workflow is that contributions can be integrated without the need for everybody to push to a single central repository</p>
+						<p>The result is a distributed workflow that provides a flexible way for large, organic teams (including untrusted third-parties) to collaborate securely. This also makes it an ideal workflow for open source projects.</p>
+					</blockquote>
+					<header>
+						<h3>How It works</h3>
+					</header>
+					<p>
+					As in the other Git workflows, the Forking Workflow begins with an official public repository stored on a server. But when a new developer wants to start working on the project, they do not directly clone the official repository.</p>
+					<p>Instead, they fork the official repository to create a copy of it on the server. This new copy serves as their personal public repository—no other developers are allowed to push to it, but they can pull changes from it (we’ll see why this is important in a moment). After they have created their server-side copy, the developer performs a git clone to get a copy of it onto their local machine. This serves as their private development environment, just like in the other workflows.</p>
+					<p>When they're ready to publish a local commit, they push the commit to their own public repository—not the official one. Then, they file a pull request with the main repository, which lets the project maintainer know that an update is ready to be integrated. The pull request also serves as a convenient discussion thread if there are issues with the contributed code.</p>
+					<header>
+						<h3>Examples</h3>
+					</header>
+					<p>
+						The project maintainer initializes the official repository
+					</p>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/02.svg"></img>
+					<p>As with any Git-based project, the first step is to create an official repository on a server accessible to all of the team members. Typically, this repository will also serve as the public repository of the project maintainer.</p>
+					<p>Public repositories should always be bare, regardless of whether they represent the official codebase or not. So, the project maintainer should run something like the following to set up the official repository:</p>
+					<p>
+						Developers fork the official repository
+					</p>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/03.svg"></img>
+					<p>Next, all of the other developers need to fork this official repository. It’s possible to do this by SSH’ing into the server and running git clone to copy it to another location on the server—yes, forking is basically just a server-side clone. But again, Bitbucket let developers fork a repository with the click of a button.</p>
+					<p>After this step, every developer should have their own server-side repository. Like the official repository, all of these should be bare repositories.</p>
+					<p>
+						Developers clone their forked repositories
+					</p>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/04.svg">
+					</img>
+					<p>Developers work on their features</p>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/05.svg">
+					</img>
+					<p>Developers publish their features</p>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/06.svg">
+					</img>
+					<p>
+						Once a developer is ready to share their new feature, they need to do two things. First, they have to make their contribution accessible to other developers by pushing it to their public repository. Their origin remote should already be set up.
+					</p>
+					<p>
+					This diverges from the other workflows in that the origin remote points to the developer’s personal server-side repository, not the main codebase.</p>
+					<p>Second, they need to notify the project maintainer that they want to merge their feature into the official codebase. Github provides a “Pull request” button that leads to a form asking you to specify which branch you want to merge into the official repository.</p>
+					<p>Typically, you’ll want to integrate your feature branch into the upstream remote’s master branch.</p>
+					<p>The project maintainer integrates their features</p>
+					<img src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/07.svg" >
+					<p>When the project maintainer receives the pull request, their job is to decide whether or not to integrate it into the official codebase. They can do this in one of two ways:</p>
+					<ol>
+						<li>Inspect the code directly in the pull request</li>
+						<li>Pull the code into their local repository and manually merge it</li>
+					</ol>
+				</div>
+			</section>
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li>&copy; Avenue Code. All rights reserved.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

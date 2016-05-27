@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Overview of Software Automated Workflows</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<!--<script src="../../js/jquery.min.js"></script>-->
+		<script src="../../js/jquery.scrollzer.min.js"></script>
+		<script src="../../js/jquery.scrolly.min.js"></script>
+		<script src="../../js/skel.min.js"></script>
+		<script src="../../js/skel-layers.min.js"></script>
+		<script src="../../js/init.js"></script>
+		<!--<script src="vendors/jquery-ui/jquery-ui.min.js"></script>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+		
+		
+		<script type="text/javascript">
+			
+		</script>
+		<noscript>
+		<link rel="stylesheet" href="/css/skel.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/style-xlarge.css" />
+		</noscript>
+		<style>
+			.help-tip .ui-dialog-titlebar {
+				background: #4acaa8;
+			color: #d1f1e9;
+			height: 100%;
+			/* position: fixed; */
+			text-align: center;
+			top: 0;
+			/* width: 23em; */
+			right: 0;
+			border-radius: 0px;
+			border: none;
+			}
+			.ac-caption {
+				margin: 5px 0px 10px 0px;
+				font-size: 13px;
+				text-align: center;
+			}
+			#header > nav ul li a {
+				padding: 0px;
+				font-size: 0.8em;
+			}
+			#one:before {
+				background-image: none;
+				height: 0em;
+			}
+			.tip:hover {
+				font-weight: bold;
+			}
+			header.major h2 {
+				line-height: 1em;
+			}
+			.content-dg .list {
+				margin-top: 20px;
+			}
+		</style>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+		<div id="dialog" title="Help Tip"></div>
+		<script id="dialog-content" type="text/x-handlebars-template">
+			<div class="content-dg">
+									<h1>{{title}}</h1>
+									<div class="body">
+															<p align="justify">{{{body}}}</p>
+									</div>
+									{{#if list}}
+										<div class="list">
+																{{#each list}}
+																		<li>{{item}}</li>
+																{{/each}}
+										</div>
+									{{/if}}
+			</div>
+		</script>
+		<div id="wrapper">
+			<!-- Header -->
+			<section id="header" class="skel-layers-fixed">
+				<header>
+					
+					<h1 id="logo"><a href="../../automated-workflows.html">Overview of Software Automated Workflow</a></h1>
+					
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">Introduction</a></li>
+						<li><a href="#two">Agile</a></li>
+						<li><a href="#three">Lean</a></li>
+						<li><a href="#fourth">DevOps</a></li>
+						<li><a href="#fifth">IT Performance</a></li>
+						
+					</ul>
+					<!-- <img src="http://www.avenuecode.com/wp-content/themes/ac-site/images/white-logo.png" alt=""> -->
+				</nav>
+				<footer>
+				</footer>
+			</section>
+			<!-- Main -->
+			<div id="main">
+				<!-- One -->
+				<section id="one">
+					<div class="container">
+						<header class="major">
+							<h2>Introduction</h2>
+						</header>
+						<p align="justify">
+							Thinking in the practices of Automated Workflow we think in three complentaries practices:
+							<ul>
+								<li><span class="tip ci-link">Continuous Integration</span></li>
+								<li><span id="cdel-link" class="tip">Continuous Delivery</span></li>
+								<li><span id="cdep-link" class="tip">Continuous Deployment</span></li>
+							</ul>
+						</p>
+						
+						<header>
+							<h5>Releated Movements</h5>
+						</header>
+						<ul>
+							<li>Agile</li>
+							<li>Lean</li>
+							<li>DevOps</li>
+						</ul>
+					</section>
+					
+					<section id="two">
+						<div class="container">
+							<header class="major">
+								<h2>Agile</h2>
+							</header>
+							<p align="justify">
+								<blockquote>
+									<p>
+										<font size="+2"></font><font size="+3">Individuals and interactions </font><font size="+2">over processes and tools<br></font><font size="+2"></font><font size="+3">Working software </font><font size="+2">over comprehensive documentation<br></font><font size="+2"></font><font size="+3">Customer collaboration </font><font size="+2">over contract negotiation<br></font><font size="+2"></font><font size="+3">Responding to change </font><font size="+2">over following a plan<br></font>
+									</p>
+								</blockquote><cite>Agile Manifesto</cite>
+							</p>
+							<p align="justify">
+								
+								<blockquote>Our highest priority is to satisfy the customer
+									through early and continuous delivery
+								of valuable software.</blockquote><cite>Agile Manifesto First Principle - Jez Humble Continiuous Delivery Inspiration</cite>
+							</p>
+							<hr />
+							<figure align="justify">
+								<img src="images/agile-traditional.png"
+								alt="Agile vs Traditional"
+								width="540"
+								>
+								<figcaption>Agile vs Traditional</figcaption>
+							</figure>
+							<hr />
+							<figure align="justify">
+								<img src="images/roi-agile.png"
+								alt="ROI - Agile vs Traditional"
+								width="540"
+								>
+								<figcaption>
+							</figure>
+							<hr />
+							<header>
+								<h3>Extreme Programming</h3>
+							</header>
+							<p align="justify">
+								Extreme Programming practices are already know practices that the moviment consider that worked well in the pass, that was important to the success of existing projects. The key point of XP is bring these practices as far it can go, to the edge of Extreme as we possible can, and doing this in a rigorous and intensive manner.
+								<h4>XP Practices</h4>
+								<cite>Based on Stewart Baird - <a href="http://bit.ly/1mNjuXY">Extreme Programming Practices in Action</a> - http://bit.ly/1mNjuXY</cite>
+								<p></p>
+								<table>
+									<thead>
+										<tr>
+											<th>XP Principle</th>
+											<th>Related Practice</th>
+											<th>Category</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th rowspan="4">Fine scale feedback</th>
+											<td><span id="tdd-link"><u>Test Driven Development</u><span></td>
+											<td>Processes and Programming</td>
+										</tr>
+										<tr>
+											<td>The Planning Game</td>
+											<td>Processes</td>
+										</tr>
+										<tr>
+											<td>On-site Customer</td>
+											<td>Processes</td>
+										</tr>
+										<tr>
+											<td>Pair Programming</td>
+											<td>Team</td>
+										</tr>
+										<tr>
+											<th rowspan="3"><u>Continuous process rather than batch</u></th>
+											<td><span class="ci-link"><b>Continuous Integration</b></span></td>
+											<td>Team</td>
+										</tr>
+										<tr>
+											<td>Refactoring</td>
+											<td>Programming</td>
+										</tr>
+										<tr>
+											<td><b>Small Releases</b></td>
+											<td>Team and Processes</td>
+										</tr>
+										<tr>
+											<th rowspan="4">Shared understanding</th>
+											<td>Simple Design</td>
+											<td>Programming</td>
+										</tr>
+										<tr>
+											<td>System Metaphor</td>
+											<td>Team</td>
+										</tr>
+										<tr>
+											<td>Collective Code Ownership</td>
+											<td>Team</td>
+										</tr>
+										<tr>
+											<td>Coding Standards</td>
+											<td>Team</td>
+										</tr>
+										<tr>
+											<th rowspan="3">Programmer welfare</th>
+											<td>40-Hour Week</td>
+											<td>Team</td>
+										</tr>
+									</tbody>
+								</table>
+							</p>
+							<figure align="justify">
+								<img src="images/xp-continuos_integration.png"
+								alt="Extreme Programming to Continuous Integration">
+								<figcaption>Extreme Programming to Continuous Integration</figcaption>
+							</figure>
+						</div>
+					</section>
+					<section id="three">
+						<div class="container">
+							<header class="major">
+								<h2>Lean Enterprise</h2>
+							</header>
+							
+							<p><blockquote>
+								<figure align="justify">
+									<img src="images/leen_0204.png" width="100%">
+									<figcaption>The build-measure-learn Loop</figcaption>
+								</figure>
+							</blockquote><cite>Jez Humble; Joanne Molesky - Lean Enterprise</cite></p>
+							<hr />
+							<p align="justifiy">
+								<blockquote>
+									Evaluating well-designed and executed experiments that were designed to improve a key metric, only about 1/3 were successful at improving the key metric!
+								</blockquote><cite>"Online Experimentation at Microsoft | Kohavi et al | http://stanford.io/130uW6X"</cite>
+							</p>
+							<!-- <hr /> -->
+							<blockquote>
+								
+								
+								<p align="justify">
+								2/3 of software we delivery have 0 or negative impact on our customers or business. We can be playing guitar for 2/3 of our work week and delivery the same value for our customers if we have a chance to know</p>
+								<h5>Impacts</h5>
+								<ul>
+									<li>opportunity cost - what of good we could be doing</li>
+									<li>costs of maintaining that feature in production</li>
+									<li>costs in add complex that slow down the work to add new features</li>
+								</ul>
+							</blockquote><cite>Based on speach - Jez Humble - Continuos Delivery Workshop</cite>
+						</p>
+						<hr />
+						<p align="justify"><blockquote>
+							<figure align="justify">
+								<img src="images/devops-report-2015-lean-relations.png" width="100%">
+								<figcaption>Path diagram showing relationships between <b>lean management practices</b>, IT performance, culture burnout, and organization performance</figcaption>
+							</figure>
+						</blockquote><cite>Puppet Labs - DevOps Report 2015</cite></p>
+						<hr />
+					</div>
+				</section>
+				<section id="fourth">
+					<div class="container">
+						<header class="major">
+							<h2>DevOps</h2>
+						</header>
+						<p align="justify">
+							<blockquote>
+								a cross-disciplinary community of practice dedicated to the study of building, evolving and operating rapidly-changing resilient systems at scale.”
+							</blockquote><cite>Jez Humble</cite>
+							<blockquote>
+								DevOps is the practice of operations and development engineers participating together in the entire service lifecycle, from design through the development process to production support.
+								</blockquote><cite><a href="http://theagileadmin.com/what-is-devops/">The agile admin</a></cite>
+								<blockquote>
+									DevOps is also characterized by operations staff making use many of the same techniques as developers for their systems work.
+									</blockquote><cite><a href="http://theagileadmin.com/what-is-devops/">The agile admin</a></cite>
+									<blockquote>
+										DevOps is a set of practices to reduce the time between committing a change to a system and the change being placed into normal productin, while ensuirng high quality
+									</blockquote><cite>Liming Zhu; Len Bass; Ingo Weber - DevOps: A Software Architect's Perspective</cite>
+									<hr />
+									<blockquote>
+										... devops is a cultural movement that seeks to improve both software development and the professional lives of the people involved in the field ...
+									</blockquote><cite>Jennifer Davis; Katherine Daniels - Effective DevOps</cite>
+									<hr />
+									<blockquote>
+										DevOps (a portmanteau of development and operations) is a sotware development method that stresses communication, collaboration and integration between software developers and information technology(IT) operations professional.
+									</blockquote><cite>Gartner Research 2012 - Big Data Drives Rapid Changes in infrastructure and $232 Billion in IT Spending Through 2016</cite>
+									<hr />
+									<blockquote>
+										Successful DevOps is mutual respect between development and operations. You deliver quality code and I'll deliver a quality platform to run that code. We can have differences of option about how to do it, but at the end of the day, we are together going to deliver software that performs as advertised and meets our customer's needs.
+									</blockquote><cite>Mike Surma - Rackpsace Interview</cite>
+								</p>
+								<p align="justify">
+									<ul>
+										<li>Operation is not it’s own silo, but a liaison between operations and developers</li>
+										<li>Ops been at inceptions, showcases and retros</li>
+										<li>As CD requires machines to be provisioning programatically we will drive a much earlier awareness of operations concerns</li>
+										<li>Once in a while the idea of Dev works in ops can carry pagers</li>
+										<li>The goal is developers create more deployable software</li>
+									</ul>
+									<cite>Based in Neal Ford</cite>
+								</p>
+							</p>
+						</div>
+					</section>
+					<section id="fifth">
+						<div class="container">
+							<header class="major">
+								<h2>IT Performance</h2>
+							</header>
+							<p align="justify">
+								<blockquote>
+									<p align="justify">
+									Last year, we were delighted to discover that we could actually quantitatively define IT performance. We discovered that high- performing IT organizations are more agile and reliable: They deploy code 30 times more frequently than their lower-performing peers, with 50 percent fewer failures. This year, we’ve learned that IT performance has real impact on the business: Companies with high IT performance are twice as likely to exceed their pro tability, market</p>
+								</blockquote><cite>Puppet Labs - DevOps Report 2014</cite>
+							</p>
+							<p align="justify">
+								Pupptet Labs, 2014 DevOps Report made some observations based on quantitative evidence of their researchs that IT performance and DevOps culture and practices contribute to organizational performance.
+							</p>
+							<p align="justify">
+								IT Performance is measured in terms of throughput(deployment frequency, lead time for changes) and stability(mean time to recover). So to increase organizational performance through IT performance you need to invest in practices that increase throughput and stability metrics.
+							</p>
+							<p align="justify">
+								<blockquote>
+									<figure align="justify">
+										<img src="images/devops-report-2014-it-performance-metrics.png" width="100%">
+										<figcaption>Practices Correlated with IT Performance Metrics</figcaption>
+									</figure>
+								</blockquote><cite>Puppet Labs - DevOps Report 2014</cite>
+							</p>
+							
+						</div>
+					</section>
+					
+					<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Avenue Code. All rights reserved.</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</body>
+		</html>
